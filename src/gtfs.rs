@@ -130,8 +130,8 @@ fn write_calendar(gtfs_path: &str) {
     let fname = format!("{}/{}", gtfs_path, "/calendar.txt");
     let fpath = Path::new(&fname);
     let mut wtr = csv::Writer::from_file(fpath).unwrap();
-    let start_date = "20151031";
-    let end_date = "20161031";
+    let start_date = "20181031";
+    let end_date = "20191031";
     let records = vec![
         ("service_id", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday", "start_date", "end_date"),
         ("School Monday", "1", "0", "0", "0", "0", "0", "0", &start_date, &end_date),
