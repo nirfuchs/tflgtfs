@@ -1,0 +1,18 @@
+[tasks.clean]
+command = "cargo"
+description = "remove the target directory"
+args = ["clean"]
+
+[tasks.build-release]
+command = "cargo"
+description = "compile the current package for release"
+args = ["build", "--release"]
+dependencies = ["clean"]
+
+[tasks.build-release.mac.env]
+DEP_OPENSSL = "/usr/local/opt/openssl"
+OPENSSL_DIR = "/usr/local/opt/openssl"
+DEP_OPENSSL_LIB = "/usr/local/opt/openssl/lib"
+OPENSSL_LIB_DIR = "/usr/local/opt/openssl/lib"
+DEP_OPENSSL_INCLUDE = "/usr/local/opt/openssl/include"
+OPENSSL_INCLUDE_DIR = "/usr/local/opt/openssl/include"
